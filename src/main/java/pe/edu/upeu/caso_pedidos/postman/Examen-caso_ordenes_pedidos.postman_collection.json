@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "b956c598-645c-4d9b-9b73-71d8b144ee6e",
+		"name": "Examen-caso_ordenes_pedidos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37780725"
+	},
+	"item": [
+		{
+			"name": "Almacen",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/almacenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"direccion\":\"Avenida 1\",\r\n    \"estado\":\"A\",\r\n    \"nombre\":\"Almacen 1\",\r\n    \"telefono\":\"999888777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/almacenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"direccion\":\"Avenida 1\",\r\n    \"estado\":\"I\",\r\n    \"nombre\":\"Almacen 2\",\r\n    \"telefono\":\"999666777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/almacenes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/almacenes/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forma_pago",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/forma_pagos"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"nombre_pago\":\"Tarjetasss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/forma_pagos"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"nombre_pago\":\"Creditosss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/forma_pagos/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/forma_pagos/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orden",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/ordenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":7,\r\n    \"estado\":\"A\",\r\n    \"fecha_orden\":\"2024-09-10T24:20:10\",\r\n    \"fecha_solicita\":\"2024-09-11T24:20:10\",\r\n    \"almacen\":{\r\n        \"id\":2\r\n    },\r\n    \"forma_pago\":{\r\n        \"id\":2\r\n    },\r\n    \"proveedor\":{\r\n        \"id\":2\r\n    },\r\n    \"tipo_orden\":{\r\n        \"id\":2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/ordenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/ordenes/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":6,\r\n    \"estado\":\"I\",\r\n    \"fecha_orden\":\"2023-09-12\",\r\n    \"fecha_solicita\":\"2024-09-11\",\r\n    \"almacen\":{\r\n        \"id\":2\r\n    },\r\n    \"forma_pago\":{\r\n        \"id\":2\r\n    },\r\n    \"proveedor\":{\r\n        \"id\":2\r\n    },\r\n    \"tipo_orden\":{\r\n        \"id\":2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/ordenes/6"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proveedor",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/proveedores"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"contacto\":\"Grant\",\r\n    \"estado\":\"A\",\r\n    \"razon_social\":\"LIVE\",\r\n    \"ruc\":\"1246742\",\r\n    \"telefono\":\"999555222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/proveedores"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"contacto\":\"Sir\",\r\n    \"estado\":\"I\",\r\n    \"razon_social\":\"LIVES\",\r\n    \"ruc\":\"1525634\",\r\n    \"telefono\":\"999555333\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/proveedores/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/proveedores/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo_orden",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/tipo_ordenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"descripcion\":\"Venta junio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tipo_ordenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"descripcion\":\"Venta septiembre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/tipo_ordenes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/tipo_ordenes/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
